@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 import { AuthContext } from "../../../../Context/UserContext";
-import Swal from 'sweetalert2'
 
 const Reviews = ({serviceId, serviceTitle, serviceImg}) => {
   console.log(serviceId);
@@ -28,7 +28,7 @@ const Reviews = ({serviceId, serviceTitle, serviceImg}) => {
       serviceTitle:serviceTitle
     }
     console.log(review);
-    fetch('https://mildlife-journey-server-asifsikder23.vercel.app/review',{
+    fetch('mildlife-journey-server.vercel.app/review',{
       method: "POST",
       headers: {'content-type':"application/json"},
       body:JSON.stringify(review)

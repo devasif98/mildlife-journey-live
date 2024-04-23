@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "./Services.css";
+import { CirclesWithBar } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import ServiceCards from "./ServiceCards";
-import { CirclesWithBar } from "react-loader-spinner";
+import "./Services.css";
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
   const [inf, setInf] = useState([]);
   useEffect(() => {
     setLoading(true);
-    fetch("https://mildlife-journey-server-asifsikder23.vercel.app/limit")
+    fetch("mildlife-journey-server.vercel.app/limit")
       .then((res) => res.json())
       .then((data) => {
         setInf(data)

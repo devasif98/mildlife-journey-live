@@ -1,5 +1,5 @@
 import React from "react";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 const Addpkg = () => {
 
   const handlePackage = (event) =>{
@@ -14,7 +14,7 @@ const Addpkg = () => {
     const description = form.description.value;
     form.reset();
     const packages = {title:title, img:photo, duration:duration, cost:amount, des:description, review:review, shortDes:shortDes}
-    fetch('https://mildlife-journey-server-asifsikder23.vercel.app/services',{
+    fetch('mildlife-journey-server.vercel.app/services',{
       method: "POST",
       headers: {'content-type':"application/json"},
       body:JSON.stringify(packages)

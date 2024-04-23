@@ -7,7 +7,7 @@ import ServiceDetailsInfo from "./ServiceDetailsInfo";
 const ServiceDetails = () => {
   const [datas, setDatas] = useState([]);
   useEffect(() => {
-    fetch('https://mildlife-journey-server-asifsikder23.vercel.app/services')
+    fetch('mildlife-journey-server.vercel.app/services')
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);

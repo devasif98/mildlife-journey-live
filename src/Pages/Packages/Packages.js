@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { ThreeDots } from "react-loader-spinner";
 import useTitle from "../../hooks/useTitle";
 import PackagesCard from "./PackagesCard";
-import { CirclesWithBar, ThreeDots } from "react-loader-spinner";
 
 const Packages = () => {
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState([]);
   useEffect(() => {
     setLoading(true);
-    fetch("https://mildlife-journey-server-asifsikder23.vercel.app/services")
+    fetch("mildlife-journey-server.vercel.app/services")
       .then((res) => res.json())
       .then((data) => {
         setInfo(data);

@@ -19,7 +19,7 @@ const Login = () => {
         const user = result.user;
         
         navigate(from,{replace:true})
-        fetch('https://mildlife-journey-server-asifsikder23.vercel.app/jwt',{
+        fetch('mildlife-journey-server.vercel.app/jwt',{
           method: 'POST',
           headers: {'content-type': 'application/json'},
           body: JSON.stringify({name: user.displayName,email:user.email})
@@ -40,7 +40,7 @@ const Login = () => {
         const user = result.user;
         
         navigate(from,{replace:true})
-        fetch('https://mildlife-journey-server-asifsikder23.vercel.app/jwt',{
+        fetch('mildlife-journey-server.vercel.app/jwt',{
           method: 'POST',
           headers: {'content-type': 'application/json'},
           body: JSON.stringify({name: user.displayName,email:user.email})
@@ -75,7 +75,7 @@ const Login = () => {
          timer: 1500
          
        })
-       fetch('https://mildlife-journey-server-asifsikder23.vercel.app/jwt',{
+       fetch('mildlife-journey-server.vercel.app/jwt',{
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({name: user.displayName,email:user.email})
